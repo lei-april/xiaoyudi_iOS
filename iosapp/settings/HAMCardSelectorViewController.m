@@ -18,16 +18,9 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
-		self.selectedCardIDs = [[NSMutableSet alloc] init];
-    }
+		// Custom initialization
+	}
     return self;
-}
-
-// It's essential to define this accessor method
-// ??? Is it?
-- (NSArray*) cardIDs {
-	return [self.config childrenCardIDOfCat:self.categoryID];
 }
 
 - (void)viewDidLoad
@@ -37,6 +30,17 @@
     // Do any additional setup after loading the view from its nib.
 	self.title = @"选择卡片";
 	[self.collectionView registerClass:[HAMGridCell class] forCellWithReuseIdentifier:@"CardCell"];
+	
+	self.cardIDs = [self.config childrenCardIDOfCat:self.categoryID];
+	self.selectedCardIDs = [[NSMutableSet alloc] init];
+
+	// to be used for multiple times
+	self.cardEditor = [[HAMCardEditorViewController alloc] initWithNibName:@"HAMCardEditorViewController" bundle:nil];
+	self.cardEditor.delegate = self;
+	self.cardEditor.config = self.config;
+	self.cardEditor.categoryID = self.categoryID;
+	self.cardEditor.modalPresentationStyle = UIModalPresentationCurrentContext;
+	self.cardEditor.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
 }
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
@@ -103,24 +107,19 @@
 	return cell;
 }
 
-// create card or add cards
+// create card
 - (void)rightTopButtonPressed:(id)sender {
 	
-	HAMCardEditorViewController *cardEditor = [[HAMCardEditorViewController alloc] initWithNibName:@"HAMCardEditorViewController" bundle:nil];
-	cardEditor.cardID = nil;
-	cardEditor.categoryID = self.categoryID;
-	cardEditor.config = self.config;
-	cardEditor.delegate = self;
+	self.cardEditor.cardID = nil;
 	
 	// !!!
 	UIView *background = [self.view snapshotViewAfterScreenUpdates:NO];
-	[cardEditor.view insertSubview:background atIndex:NO];
+	[self.cardEditor.view insertSubview:background atIndex:NO];
 	
-	cardEditor.modalPresentationStyle = UIModalPresentationCurrentContext;
-	cardEditor.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-	[self presentViewController:cardEditor animated:YES completion:NULL];
+	[self presentViewController:self.cardEditor animated:YES completion:NULL];
 }
 
+// add the selected cards
 - (void)bottomButtonPressed:(id)sender {
 	
 	int animation = [self.config animationOfCat:self.userID atIndex:self.index]; // keep the animation unchanged
@@ -179,24 +178,20 @@
 	}
 	else { // Mode Edit
 		
-		HAMCardEditorViewController *cardEditor = [[HAMCardEditorViewController alloc] initWithNibName:@"HAMCardEditorViewController" bundle:nil];
-		cardEditor.cardID = cardID;
-		cardEditor.categoryID = self.categoryID;
-		cardEditor.config = self.config;
-		cardEditor.delegate = self;
+		self.cardEditor.cardID = cardID;
 			
 		// !!!
 		UIView *background = [self.view snapshotViewAfterScreenUpdates:NO];
-		[cardEditor.view insertSubview:background atIndex:NO];
+		[self.cardEditor.view insertSubview:background atIndex:NO];
 		
-		cardEditor.modalPresentationStyle = UIModalPresentationCurrentContext;
-		cardEditor.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-		[self presentViewController:cardEditor animated:YES completion:NULL];
+		[self presentViewController:self.cardEditor animated:YES completion:NULL];
 	}
 }
 
 - (void)cardEditorDidEndEditing:(HAMCardEditorViewController *)cardEditor {
 	[self dismissViewControllerAnimated:YES completion:NULL];
+	// update the cards displayed
+	self.cardIDs = [self.config childrenCardIDOfCat:self.categoryID];
 	[self.collectionView reloadData];
 }
 

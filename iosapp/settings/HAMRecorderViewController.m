@@ -164,6 +164,13 @@
 		[self.config deleteChildOfCatInLib:self.categoryID atIndex:oldIndex];
 	}
 
+	// add the card immediately
+	if (self.addCardOnCreation) {
+		int animation = [self.config animationOfCat:self.parentID atIndex:self.index]; // keep the animation unchanged
+		HAMRoom *room = [[HAMRoom alloc] initWithCardID:self.tempCard.UUID animation:animation];
+		[self.config insertChildren:@[room] intoCat:self.parentID atIndex:self.index];
+	}
+	
 	[self.delegate recorderDidEndRecording:self]; // inform the grid view to refresh
 }
 

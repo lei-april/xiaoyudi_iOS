@@ -30,7 +30,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-	
+	// draw blank areas on the image to make its ratio 4:3
 	if (self.image.size.height < self.image.size.width) {
 		CGSize newSize;
 		newSize.width = self.image.size.width;

@@ -215,8 +215,10 @@
 		8EE7A2E41822361A007356B1 /* HAMCardSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE7A2DE1822361A007356B1 /* HAMCardSelectorViewController.m */; };
 		8EE7A2E71822361A007356B1 /* HAMGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EE7A2E21822361A007356B1 /* HAMGridCell.xib */; };
 		AB340B4D1852328A0041934E /* addnewBG2.png in Resources */ = {isa = PBXBuildFile; fileRef = AB340B4C1852328A0041934E /* addnewBG2.png */; };
+		AB8D6DD4185F0F8300324041 /* createCategory.png in Resources */ = {isa = PBXBuildFile; fileRef = AB8D6DD3185F0F8300324041 /* createCategory.png */; };
 		ABCC8B7C1851F86D00FA6649 /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = ABCC8B7B1851F86D00FA6649 /* cancel.png */; };
 		ABCC8B7E1851F90C00FA6649 /* edit.png in Resources */ = {isa = PBXBuildFile; fileRef = ABCC8B7D1851F90C00FA6649 /* edit.png */; };
+		ABEE9F5D1862E10700781EEA /* defaultImage.png in Resources */ = {isa = PBXBuildFile; fileRef = ABEE9F5C1862E10700781EEA /* defaultImage.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -357,7 +359,6 @@
 		6694E5961851EF3B008EC01D /* sucaiku.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sucaiku.png; sourceTree = "<group>"; };
 		6694E5BA1851EFC3008EC01D /* background2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background2.png; sourceTree = "<group>"; };
 		6694E5BC1851F1E7008EC01D /* confirm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = confirm.png; sourceTree = "<group>"; };
-		6694E5CC1855C4AE008EC01D /* iosapp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = iosapp.xcodeproj; sourceTree = "<group>"; };
 		6694E5D01855D5E9008EC01D /* HAMAddCardPopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HAMAddCardPopoverViewController.h; path = settings/mainPage/HAMAddCardPopoverViewController.h; sourceTree = "<group>"; };
 		6694E5D11855D5E9008EC01D /* HAMAddCardPopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HAMAddCardPopoverViewController.m; path = settings/mainPage/HAMAddCardPopoverViewController.m; sourceTree = "<group>"; };
 		6694E5D21855D5E9008EC01D /* HAMAddCardPopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HAMAddCardPopoverViewController.xib; path = settings/mainPage/HAMAddCardPopoverViewController.xib; sourceTree = "<group>"; };
@@ -473,10 +474,12 @@
 		8EE7A2DE1822361A007356B1 /* HAMCardSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HAMCardSelectorViewController.m; path = settings/HAMCardSelectorViewController.m; sourceTree = "<group>"; };
 		8EE7A2E21822361A007356B1 /* HAMGridCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HAMGridCell.xib; path = settings/HAMGridCell.xib; sourceTree = "<group>"; };
 		AB340B4C1852328A0041934E /* addnewBG2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addnewBG2.png; sourceTree = "<group>"; };
+		AB8D6DD3185F0F8300324041 /* createCategory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = createCategory.png; sourceTree = "<group>"; };
 		ABCC8B7B1851F86D00FA6649 /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
 		ABCC8B7D1851F90C00FA6649 /* edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit.png; sourceTree = "<group>"; };
 		ABCC8B84185220B700FA6649 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
 		ABCC8B85185220B700FA6649 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
+		ABEE9F5C1862E10700781EEA /* defaultImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultImage.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -643,7 +646,6 @@
 		66610491178BB04A003AEE3D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6694E5CC1855C4AE008EC01D /* iosapp.xcodeproj */,
 				6694E5711851EC77008EC01D /* libz.dylib */,
 				667E53BB17A633DC00BBDE35 /* libsqlite3.dylib */,
 				66CC961717B4BDE700DB3A57 /* SystemConfiguration.framework */,
@@ -717,7 +719,6 @@
 		6694E5731851EF3B008EC01D /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				6620B288185CDC74005B168E /* trash.png */,
 				66AFDBDA185C2AE600913F8D /* +.png */,
 				6694E5751851EF3B008EC01D /* addnew.png */,
 				6694E5761851EF3B008EC01D /* addnewBG.png */,
@@ -740,6 +741,8 @@
 				6694E5871851EF3B008EC01D /* choose.png */,
 				6694E5881851EF3B008EC01D /* classBG.png */,
 				6694E5BC1851F1E7008EC01D /* confirm.png */,
+				AB8D6DD3185F0F8300324041 /* createCategory.png */,
+				ABEE9F5C1862E10700781EEA /* defaultImage.png */,
 				6694E5891851EF3B008EC01D /* delete.png */,
 				6694E58A1851EF3B008EC01D /* deleteDOWN.png */,
 				ABCC8B7D1851F90C00FA6649 /* edit.png */,
@@ -755,13 +758,9 @@
 				6694E5941851EF3B008EC01D /* record.png */,
 				6694E5951851EF3B008EC01D /* recordDOWN.png */,
 				6694E5961851EF3B008EC01D /* sucaiku.png */,
+				6620B288185CDC74005B168E /* trash.png */,
 			);
 			path = lib;
-			sourceTree = "<group>";
-		};
-		6694E5CD1855C4AE008EC01D /* Products */ = {
-			isa = PBXGroup;
-			name = Products;
 			sourceTree = "<group>";
 		};
 		6694E5D51855D5FD008EC01D /* addCardpop */ = {
@@ -1055,12 +1054,6 @@
 			mainGroup = 66610486178BB04A003AEE3D;
 			productRefGroup = 66610490178BB04A003AEE3D /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 6694E5CD1855C4AE008EC01D /* Products */;
-					ProjectRef = 6694E5CC1855C4AE008EC01D /* iosapp.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				6661048E178BB04A003AEE3D /* iosapp */,
@@ -1141,6 +1134,7 @@
 				6694E5B01851EF3B008EC01D /* name.png in Resources */,
 				66DE8E1D184BB1F7009AFF39 /* common_cat_bg.png in Resources */,
 				6694E5D41855D5E9008EC01D /* HAMAddCardPopoverViewController.xib in Resources */,
+				AB8D6DD4185F0F8300324041 /* createCategory.png in Resources */,
 				66A81FE51850FDA200EA6FD6 /* parent_settingspop_layout2x2.png in Resources */,
 				8E0728691835FEA700E538FB /* HAMCategoryEditorViewController.xib in Resources */,
 				66A81FAA184E574000EA6FD6 /* parent_main_settingsbtn_down.png in Resources */,
@@ -1161,6 +1155,7 @@
 				66DE8E19184BB1F7009AFF39 /* common_background.png in Resources */,
 				66466A711859DD67006EE478 /* cat2_card5_s1.mp3 in Resources */,
 				66466A591859DD67006EE478 /* cat1_card2_p1.jpg in Resources */,
+				ABEE9F5D1862E10700781EEA /* defaultImage.png in Resources */,
 				6694E5631851CF44008EC01D /* child_inCat_blurBG in Resources */,
 				66A81F8B184E178600EA6FD6 /* HAMImageCropperViewController.xib in Resources */,
 				66466A5B1859DD67006EE478 /* cat1_card2_p3.jpg in Resources */,

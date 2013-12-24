@@ -23,6 +23,10 @@
 // 1	 - edit
 // other - replace
 @property int index;
-@property (nonatomic, assign) HAMGridCellMode cellMode;
+@property HAMGridCellMode cellMode;
+@property (strong, nonatomic) NSArray *categoryIDs;
+@property (strong, nonatomic) HAMCardSelectorViewController *cardSelector;
+@property (strong, nonatomic) HAMCategoryEditorViewController *categoryEditor;
+@property (strong, nonatomic) HAMCardEditorViewController *cardEditor;
 
 @end

@@ -22,7 +22,7 @@
 @end
 
 
-@interface HAMCardEditorViewController : UIViewController <UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, HAMImageCropperViewControllerDelegate, UITableViewDataSource, UITableViewDelegate, HAMRecorderViewControllerDelegate>
+@interface HAMCardEditorViewController : UIViewController <UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, HAMImageCropperViewControllerDelegate, UITableViewDataSource, UITableViewDelegate, HAMRecorderViewControllerDelegate, UIActionSheetDelegate>
 
 @property (strong, nonatomic) NSString *cardID;
 @property (strong, nonatomic) NSString *categoryID;
@@ -44,6 +44,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *cardNameLabel;
 @property (weak, nonatomic) IBOutlet UIButton *chooseCategoryButton;
 @property (weak, nonatomic) IBOutlet UIImageView *editCardTitleView;
+
+// for use by DayYue, not necessarily initialized
+@property BOOL addCardOnCreation; // supposed to be 0 by default
+@property (strong, nonatomic) NSString *parentID;
+@property int index;
 
 - (IBAction)recordButtonTapped:(id)sender;
 - (IBAction)shootImageButtonPressed:(id)sender;

@@ -42,6 +42,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *greetingLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *editCardTitleView;
 
+// for use by Day Yue, not necessarily initialized
+@property BOOL addCardOnCreation;
+@property (strong, nonatomic) NSString *parentID;
+@property int index;
+
+
 - (IBAction)cancelButtonPressed:(id)sender;
 - (IBAction)finishButtonPressed:(id)sender;
 - (IBAction)recordButtonPressed:(id)sender;

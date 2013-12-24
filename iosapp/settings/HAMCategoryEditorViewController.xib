@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="4510" systemVersion="12E3200" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment defaultVersion="1552" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HAMCategoryEditorViewController">
             <connections>
                 <outlet property="categoryNameField" destination="6FZ-bI-Xrv" id="Vn9-6W-PAC"/>
+                <outlet property="createCategoryTitleView" destination="0ww-11-YYQ" id="lrZ-FS-kJT"/>
                 <outlet property="deleteButton" destination="dpq-P9-wYt" id="mKE-tY-egH"/>
                 <outlet property="finishButton" destination="ayE-ed-QYj" id="GqT-cr-NGj"/>
                 <outlet property="view" destination="2" id="3"/>
@@ -62,6 +63,10 @@
                         <action selector="finishButtonPressed:" destination="-1" eventType="touchUpInside" id="OlF-7B-PPr"/>
                     </connections>
                 </button>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="createCategory.png" translatesAutoresizingMaskIntoConstraints="NO" id="0ww-11-YYQ">
+                    <rect key="frame" x="294" y="312" width="185" height="45"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -71,5 +76,6 @@
         <image name="addnewBG2.png" width="1174" height="955"/>
         <image name="cancel.png" width="338" height="178"/>
         <image name="confirm.png" width="338" height="178"/>
+        <image name="createCategory.png" width="370" height="90"/>
     </resources>
 </document>

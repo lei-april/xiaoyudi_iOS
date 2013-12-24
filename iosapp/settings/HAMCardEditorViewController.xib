@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="4510" systemVersion="12E3200" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment defaultVersion="1552" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HAMCardEditorViewController">
@@ -49,9 +49,10 @@
                         <action selector="shootImageButtonPressed:" destination="-1" eventType="touchUpInside" id="pSB-HL-utp"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="spa-Fx-Q2D">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="spa-Fx-Q2D">
                     <rect key="frame" x="158" y="364" width="180" height="135"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardBG.png" translatesAutoresizingMaskIntoConstraints="NO" id="gVA-ku-x0y">
                     <rect key="frame" x="130" y="347" width="239" height="231"/>
@@ -138,6 +139,7 @@
         <image name="cancel.png" width="338" height="178"/>
         <image name="cardBG.png" width="1265" height="1224"/>
         <image name="choose.png" width="496" height="142"/>
+        <image name="defaultImage.png" width="720" height="540"/>
         <image name="editcard.png" width="370" height="90"/>
         <image name="name.png" width="480" height="135"/>
         <image name="next.png" width="338" height="178"/>

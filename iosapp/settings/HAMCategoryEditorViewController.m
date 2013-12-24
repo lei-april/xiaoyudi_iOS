@@ -29,10 +29,10 @@
     // Do any additional setup after loading the view from its nib.
 	if (self.categoryID) // editing
 		self.categoryNameField.text = [self.config card:self.categoryID].name;
+	else
+		self.createCategoryTitleView.hidden = NO;
 	
-	if ([self.categoryID isEqualToString:UNCATEGORIZED_ID])
-		self.deleteButton.hidden = YES; // don't allow deletion of the uncategorized
-	else if (self.categoryID == nil) {
+	if (self.categoryID == nil) {
 		self.deleteButton.hidden = YES; // don't allow deletion of category being created
 		self.finishButton.enabled = NO;
 	}

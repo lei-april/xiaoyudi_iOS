@@ -19,6 +19,8 @@
 @property (nonatomic, strong) NSString *userID;
 @property (nonatomic, assign) int index;
 @property (nonatomic, assign) HAMGridCellMode cellMode;
+@property (strong, nonatomic) NSArray *cardIDs;
 @property (nonatomic, strong) NSMutableSet *selectedCardIDs;
+@property (strong, nonatomic) HAMCardEditorViewController *cardEditor;
 
 @end

@@ -28,6 +28,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *deleteButton;
 @property (weak, nonatomic) IBOutlet UIButton *finishButton;
 @property (weak, nonatomic) IBOutlet UITextField *categoryNameField;
+@property (weak, nonatomic) IBOutlet UIImageView *createCategoryTitleView;
 
 - (IBAction)deleteButtonPressed:(id)sender;
 - (IBAction)cancelButtonPressed:(id)sender;
